@@ -17,8 +17,22 @@ private WebDriver driver;
 	@FindBy(xpath="//*[@id='System_nyHsmShk']/align/ul/li[1]/a")
 	private WebElement editAccountLink; 
 	
+	@FindBy(xpath="//*[@id='System_nyHsmShk']/align/ul/li[2]/a")
+	private WebElement changePasswordLink; 
+	
+	@FindBy(xpath="//*//*[@id='System_nyHsmShk']/div")
+	private WebElement pswSucsMsg;
+	
 	public void clickEditAccountLink() {
 		this.editAccountLink.click(); 
+	}
+	
+	public void clickChngPswLink() {
+		this.changePasswordLink.click(); 
+	}
+	
+	public String pswSuccessMsg(String pswSucsMsg ){
+	       return this.pswSucsMsg.getText();
 	}
 
 }

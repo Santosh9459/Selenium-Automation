@@ -2,28 +2,32 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="71409" started-at="2019-11-27T05:35:16Z" finished-at="2019-11-27T05:36:28Z">
+  <suite name="Default suite" duration-ms="34951" started-at="2019-11-27T13:36:20Z" finished-at="2019-11-27T13:36:55Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="71409" started-at="2019-11-27T05:35:16Z" finished-at="2019-11-27T05:36:28Z">
-      <class name="com.training.Simple.tests.TC01_ModifyPersonalDetailTest">
-        <test-method status="PASS" signature="SetUp()[pri:0, instance:com.training.Simple.tests.TC01_ModifyPersonalDetailTest@59fa1d9b]" name="SetUp" is-config="true" duration-ms="13" started-at="2019-11-27T11:05:16Z" finished-at="2019-11-27T11:05:16Z">
+    <test name="Default test" duration-ms="34951" started-at="2019-11-27T13:36:20Z" finished-at="2019-11-27T13:36:55Z">
+      <class name="com.training.Simple.tests.TC03_PasswordMismatch">
+        <test-method status="PASS" signature="SetUp()[pri:0, instance:com.training.Simple.tests.TC03_PasswordMismatch@28d25987]" name="SetUp" is-config="true" duration-ms="8" started-at="2019-11-27T19:06:20Z" finished-at="2019-11-27T19:06:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.Simple.tests.TC01_ModifyPersonalDetailTest@59fa1d9b]" name="setUpBeforeClass" is-config="true" duration-ms="14621" started-at="2019-11-27T11:05:16Z" finished-at="2019-11-27T11:05:31Z">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.Simple.tests.TC03_PasswordMismatch@28d25987]" name="setUpBeforeClass" is-config="true" duration-ms="10428" started-at="2019-11-27T19:06:20Z" finished-at="2019-11-27T19:06:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="Llogin()[pri:0, instance:com.training.Simple.tests.TC01_ModifyPersonalDetailTest@59fa1d9b]" name="Llogin" is-config="true" duration-ms="41340" started-at="2019-11-27T11:05:31Z" finished-at="2019-11-27T11:06:12Z">
+        <test-method status="PASS" signature="Llogin()[pri:0, instance:com.training.Simple.tests.TC03_PasswordMismatch@28d25987]" name="Llogin" is-config="true" duration-ms="13324" started-at="2019-11-27T19:06:31Z" finished-at="2019-11-27T19:06:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Llogin -->
-        <test-method status="PASS" signature="selectLogin()[pri:0, instance:com.training.Simple.tests.TC01_ModifyPersonalDetailTest@59fa1d9b]" name="selectLogin" duration-ms="15419" started-at="2019-11-27T11:06:12Z" finished-at="2019-11-27T11:06:28Z">
+        <test-method status="PASS" signature="changePassword()[pri:0, instance:com.training.Simple.tests.TC03_PasswordMismatch@28d25987]" name="changePassword" duration-ms="9188" started-at="2019-11-27T19:06:44Z" finished-at="2019-11-27T19:06:53Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- selectLogin -->
-      </class> <!-- com.training.Simple.tests.TC01_ModifyPersonalDetailTest -->
+        </test-method> <!-- changePassword -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.Simple.tests.TC03_PasswordMismatch@28d25987]" name="tearDown" is-config="true" duration-ms="1956" started-at="2019-11-27T19:06:53Z" finished-at="2019-11-27T19:06:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.training.Simple.tests.TC03_PasswordMismatch -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

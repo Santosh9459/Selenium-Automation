@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
@@ -15,6 +16,7 @@ import com.training.pom.LoginRetailPOM;
 import com.training.pom.MyAccountPOM;
 import com.training.pom.PersonalDetailsPOM;
 import com.training.pom.UserLinkPOM;
+import com.training.pom.YourPasswordPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
@@ -26,14 +28,13 @@ public class TC02_ChangePasswordTest {
 	private UserLinkPOM userlinkPOM;
 	private LoginRetailPOM loginRetailPOM;	
 	private MyAccountPOM myAccountPOM;
-	private PersonalDetailsPOM personalDetailsPOM;
+	private YourPasswordPOM yourPasswordPOM;
+	
 	private String userEmailID;
 	private String password;
-	private String userFirstName;
-	private String userLastName;
-	private String useremail;
-	private String userTelephone;
-	private String successMsg;
+	private String pswSucsMsg;
+	private String userPassword;
+	private String enterPassword;
 	private static Properties properties;
 	private ScreenShot screenShot;
 
@@ -45,14 +46,12 @@ public class TC02_ChangePasswordTest {
 		userlinkPOM = new UserLinkPOM(driver);
 		loginRetailPOM = new LoginRetailPOM(driver); 	
 		myAccountPOM = new MyAccountPOM(driver);
-		personalDetailsPOM=new PersonalDetailsPOM(driver);
+		yourPasswordPOM=new YourPasswordPOM(driver);
 		
 		userEmailID = properties.getProperty("UserName");
 		password = properties.getProperty("Password");
-		userFirstName = properties.getProperty("UserFirstName");
-		userLastName = properties.getProperty("UserLastName");
-		useremail = properties.getProperty("Useremail");
-		userTelephone = properties.getProperty("UserTelephone");
+		userPassword = properties.getProperty("UserPassword");
+		enterPassword = properties.getProperty("EnterPassword");
 		
 		screenShot = new ScreenShot(driver);
 		
@@ -71,11 +70,11 @@ public class TC02_ChangePasswordTest {
 		
 	}
 	
-	/*@AfterMethod
+	@AfterMethod
 	public void tearDown() throws Exception {
 		Thread.sleep(1000);
 		driver.quit();
-	} */
+	} 
 	
 	@BeforeTest
 	public void SetUp() throws Exception{
@@ -83,32 +82,20 @@ public class TC02_ChangePasswordTest {
 		FileInputStream inStream = new FileInputStream("./resources/others.properties");
 		properties.load(inStream);
 		
-/*		driver = DriverFactory.getDriver(DriverNames.CHROME);
-		baseUrl = properties.getProperty("baseURL");
-		
-		userlinkPOM = new UserLinkPOM(driver);
-		loginRetailPOM = new LoginRetailPOM(driver); 	
-		myAccountPOM = new MyAccountPOM(driver);
-		
-		userEmailID = properties.getProperty("UserName");
-		password = properties.getProperty("Password");
-		
-		screenShot = new ScreenShot(driver); */
 	}
 
 	@Test	
-	public void selectLogin()
+	public void changePassword()
 	{
 		
-		myAccountPOM.clickEditAccountLink();
-		personalDetailsPOM.sendFirstName(userFirstName);
-		personalDetailsPOM.senduserLastName(userLastName);
-		personalDetailsPOM.senduseremail(useremail);
-		personalDetailsPOM.senduserTelephone(userTelephone);
-		personalDetailsPOM.clickcontinueBtn();	
-		personalDetailsPOM.displayMsg(successMsg);
+		myAccountPOM.clickChngPswLink();
+		yourPasswordPOM.enterUserPsw(userPassword);
+		yourPasswordPOM.enterConfirmfPsw(enterPassword);		
+		yourPasswordPOM.clickcontinueBtn();
+
+		String pswmsg = myAccountPOM.pswSuccessMsg(pswSucsMsg);
 		
-		System.out.println(successMsg);
+		System.out.println(pswmsg);
 			
 	} 
 		

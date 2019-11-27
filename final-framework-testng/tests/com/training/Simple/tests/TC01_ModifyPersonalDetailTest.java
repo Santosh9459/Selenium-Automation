@@ -72,11 +72,11 @@ public class TC01_ModifyPersonalDetailTest {
 		
 	}
 	
-	/*@AfterMethod
+	@AfterMethod
 	public void tearDown() throws Exception {
 		Thread.sleep(1000);
 		driver.quit();
-	} */
+	} 
 	
 	@BeforeTest
 	public void SetUp() throws Exception{
@@ -84,17 +84,6 @@ public class TC01_ModifyPersonalDetailTest {
 		FileInputStream inStream = new FileInputStream("./resources/others.properties");
 		properties.load(inStream);
 		
-/*		driver = DriverFactory.getDriver(DriverNames.CHROME);
-		baseUrl = properties.getProperty("baseURL");
-		
-		userlinkPOM = new UserLinkPOM(driver);
-		loginRetailPOM = new LoginRetailPOM(driver); 	
-		myAccountPOM = new MyAccountPOM(driver);
-		
-		userEmailID = properties.getProperty("UserName");
-		password = properties.getProperty("Password");
-		
-		screenShot = new ScreenShot(driver); */
 	}
 
 	@Test	
@@ -107,9 +96,9 @@ public class TC01_ModifyPersonalDetailTest {
 		personalDetailsPOM.senduseremail(useremail);
 		personalDetailsPOM.senduserTelephone(userTelephone);
 		personalDetailsPOM.clickcontinueBtn();	
-		personalDetailsPOM.displayMsg(successMsg);
+		String smsg = personalDetailsPOM.displayMsg(successMsg);
 		
-		System.out.println(successMsg);
+		System.out.println(smsg);
 			
 	} 
 	
