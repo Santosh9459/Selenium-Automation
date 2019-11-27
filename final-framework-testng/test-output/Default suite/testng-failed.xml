@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.training.Simple.tests.ModifyPersonalDetailTest">
+      <class name="com.training.Simple.tests.TC03_PasswordMismatch">
         <methods>
-          <include name="Llogin"/>
-          <include name="SetUp"/>
           <include name="setUpBeforeClass"/>
-          <include name="selectLogin"/>
+          <include name="changePassword"/>
+          <include name="SetUp"/>
+          <include name="Llogin"/>
         </methods>
-      </class> <!-- com.training.Simple.tests.ModifyPersonalDetailTest -->
+      </class> <!-- com.training.Simple.tests.TC03_PasswordMismatch -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
