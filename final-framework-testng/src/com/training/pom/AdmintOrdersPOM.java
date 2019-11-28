@@ -1,5 +1,6 @@
 package com.training.pom;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -43,6 +44,7 @@ public class AdmintOrdersPOM {
 	public void clickCheckbox(){
 		this.selectCheckbox.click();
 	}
+	
 	public void clickDeleteButton(){
 		this.deleteButton.click();
 	}
