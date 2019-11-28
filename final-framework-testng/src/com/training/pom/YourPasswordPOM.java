@@ -43,8 +43,7 @@ private WebDriver driver;
 		this.enterPassword.clear();
 		this.enterPassword.sendKeys(enterPassword); 
 	}
-	
-	
+		
 	public void clickcontinueBtn() {
 		this.continueBtn.click(); 
 	}
