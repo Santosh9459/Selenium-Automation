@@ -64,6 +64,8 @@ public class TC01_ModifyPersonalDetailTest {
 		userTelephone = properties.getProperty("UserTelephone");
 		
 		screenShot = new ScreenShot(driver);
+
+		
 		
 	}
 

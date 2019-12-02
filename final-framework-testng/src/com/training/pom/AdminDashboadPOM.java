@@ -22,13 +22,36 @@ public class AdminDashboadPOM {
 			@FindBy(xpath="//*[@id='menu-sale']/ul/li[1]/a")
 			private WebElement selectOrderLink; 
 			
+			@FindBy(xpath="//*[@id='menu-catalog']/a")
+			private WebElement catalogIconLink; 
+			
+			@FindBy(xpath="//*[@id='menu-catalog']/ul/li[2]/a")
+			private WebElement selectProductLink;
+			
+			@FindBy(xpath="//*[@id='menu-catalog']/ul/li[1]/a")
+			private WebElement selectCatgryLink; 
+			
+			
 			
 			public void SelectOrder() {
 				
 				Actions salesSelect = new Actions(driver);
 				salesSelect.moveToElement(salesIcontLink).build().perform();		
-				selectOrderLink.click(); 
+				selectOrderLink.click(); 			
+	        }
 			
-	}
+			public void selectCategories(){
+				
+				Actions categorySelect= new Actions(driver);
+				categorySelect.moveToElement(catalogIconLink).build().perform();		
+				selectProductLink.click(); 		
+			}
+			
+           public void selectCategoryLink(){
+				
+				Actions categorySelect= new Actions(driver);
+				categorySelect.moveToElement(catalogIconLink).build().perform();		
+				selectCatgryLink.click(); 		
+			}
 
 }

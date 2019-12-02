@@ -18,8 +18,10 @@ private WebDriver driver;
 	private WebElement userLink; 
 	
 	@FindBy(xpath="//span[contains(text(),'LOGIN / REGISTER')]")
-	private WebElement loginRegister;
-			
+	private WebElement loginRegister;	
+	
+	@FindBy(xpath="//*[@id='Menu_Wmt3OMY3']/nav/ul/li[2]/ul/li[3]/a/span")
+	private WebElement myOrderLink;
 	
 	public void GotoLoginPage() {
 		
@@ -27,5 +29,11 @@ private WebDriver driver;
 		loginSelect.moveToElement(userLink).build().perform();		
 		loginRegister.click(); 
 	} 
-
+   
+public void GotoMyOrder() {
+		
+		Actions loginSelect = new Actions(driver);
+		loginSelect.moveToElement(userLink).build().perform();		
+		myOrderLink.click(); 
+	} 
 }

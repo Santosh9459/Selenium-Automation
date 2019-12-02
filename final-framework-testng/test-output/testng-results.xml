@@ -2,32 +2,32 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="34596" started-at="2019-11-28T11:50:00Z" finished-at="2019-11-28T11:50:35Z">
+  <suite name="Default suite" duration-ms="18117" started-at="2019-12-02T18:50:53Z" finished-at="2019-12-02T18:51:11Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="34596" started-at="2019-11-28T11:50:00Z" finished-at="2019-11-28T11:50:35Z">
-      <class name="com.training.Simple.tests.TC017_DeleteOrder">
-        <test-method status="PASS" signature="SetUp()[pri:0, instance:com.training.Simple.tests.TC017_DeleteOrder@28d25987]" name="SetUp" is-config="true" duration-ms="13" started-at="2019-11-28T17:20:00Z" finished-at="2019-11-28T17:20:00Z">
+    <test name="Default test" duration-ms="18117" started-at="2019-12-02T18:50:53Z" finished-at="2019-12-02T18:51:11Z">
+      <class name="com.training.Medium.tests.TC037_AdminInvalidCredential">
+        <test-method status="PASS" signature="SetUp()[pri:0, instance:com.training.Medium.tests.TC037_AdminInvalidCredential@28d25987]" name="SetUp" is-config="true" duration-ms="11" started-at="2019-12-03T00:20:53Z" finished-at="2019-12-03T00:20:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.Simple.tests.TC017_DeleteOrder@28d25987]" name="setUpBeforeClass" is-config="true" duration-ms="11406" started-at="2019-11-28T17:20:00Z" finished-at="2019-11-28T17:20:11Z">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.Medium.tests.TC037_AdminInvalidCredential@28d25987]" name="setUpBeforeClass" is-config="true" duration-ms="10388" started-at="2019-12-03T00:20:53Z" finished-at="2019-12-03T00:21:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="Llogin()[pri:0, instance:com.training.Simple.tests.TC017_DeleteOrder@28d25987]" name="Llogin" is-config="true" duration-ms="13488" started-at="2019-11-28T17:20:11Z" finished-at="2019-11-28T17:20:25Z">
+        <test-method status="PASS" signature="Llogin()[pri:0, instance:com.training.Medium.tests.TC037_AdminInvalidCredential@28d25987]" name="Llogin" is-config="true" duration-ms="4454" started-at="2019-12-03T00:21:03Z" finished-at="2019-12-03T00:21:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Llogin -->
-        <test-method status="PASS" signature="selectLogin()[pri:0, instance:com.training.Simple.tests.TC017_DeleteOrder@28d25987]" name="selectLogin" duration-ms="7776" started-at="2019-11-28T17:20:25Z" finished-at="2019-11-28T17:20:33Z">
+        <test-method status="PASS" signature="selectLogin()[pri:0, instance:com.training.Medium.tests.TC037_AdminInvalidCredential@28d25987]" name="selectLogin" duration-ms="1063" started-at="2019-12-03T00:21:08Z" finished-at="2019-12-03T00:21:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectLogin -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.Simple.tests.TC017_DeleteOrder@28d25987]" name="tearDown" is-config="true" duration-ms="1886" started-at="2019-11-28T17:20:33Z" finished-at="2019-11-28T17:20:35Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.Medium.tests.TC037_AdminInvalidCredential@28d25987]" name="tearDown" is-config="true" duration-ms="2177" started-at="2019-12-03T00:21:09Z" finished-at="2019-12-03T00:21:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.training.Simple.tests.TC017_DeleteOrder -->
+      </class> <!-- com.training.Medium.tests.TC037_AdminInvalidCredential -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

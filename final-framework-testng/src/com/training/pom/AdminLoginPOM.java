@@ -15,14 +15,18 @@ public class AdminLoginPOM {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(id="input-username")
+    @FindBy(id="input-username")
 	private WebElement adminUserName; 
 	
 	@FindBy(id="input-password")
-	private WebElement adminPassword;
+	private WebElement adminPassword; 
 	
 	@FindBy(xpath="//*[@id='content']/div/div/div/div/div[2]/form/div[3]/button")
 	private WebElement adminLoginBtn; 
+	
+	@FindBy(xpath="//*[@id='content']/div/div/div/div/div[2]/div")
+	private WebElement invalidMessage; 
+	
 	
 	public void enterUserName(String adminUserName) {
 		this.adminUserName.clear();
@@ -36,5 +40,9 @@ public class AdminLoginPOM {
 	
 	public void clickLoginBtn() {
 		this.adminLoginBtn.click(); 
+	}
+	
+	public String invalidCredMsg(String invalidMessage ){
+	       return this.invalidMessage.getText();
 	}
 }

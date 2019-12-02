@@ -3,14 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.training.Simple.tests.TC01_ModifyPersonalDetailTest">
+      <class name="com.training.Medium.tests.TC035_AdminAddProdRewd">
         <methods>
           <include name="selectLogin"/>
           <include name="setUpBeforeClass"/>
-          <include name="Llogin"/>
           <include name="SetUp"/>
+          <include name="tearDown"/>
+          <include name="Llogin"/>
         </methods>
-      </class> <!-- com.training.Simple.tests.TC01_ModifyPersonalDetailTest -->
+      </class> <!-- com.training.Medium.tests.TC035_AdminAddProdRewd -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

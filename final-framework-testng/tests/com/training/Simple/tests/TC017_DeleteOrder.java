@@ -76,11 +76,11 @@ public class TC017_DeleteOrder {
 	}
 	
 	@AfterMethod
-	public void tearDown() throws Exception {
+	/*public void tearDown() throws Exception {
 		Thread.sleep(1000);		
 		//Close the browser
-		driver.quit();
-	} 
+		driver.quit(); 
+	} */
 	
 	@BeforeTest
 	public void SetUp() throws Exception{
@@ -113,17 +113,18 @@ public class TC017_DeleteOrder {
 		al.accept();
 		
 	    //Capture the success message
-		String orderMsg =admintOrdersPOM.orderModifiedMsg(sucessMsg);
+		//String orderMsg =admintOrdersPOM.orderModifiedMsg(sucessMsg);
 		
 		//Print the message on the console
-		System.out.println(orderMsg); 
+		//System.out.println(orderMsg); 
 		
-		/*String expectation ="Success: You have modified orders!";
+		//String expectation ="Success: You have modified orders!";
 		String actual =  admintOrdersPOM.orderModifiedMsg(sucessMsg);
 
-		Assert.assertEquals(expectation,actual);
+		//Assert.assertEquals(expectation,actual);
+		Assert.assertTrue("Success: You have modified orders!".contains(actual));
 		
-		System.out.println(actual);	*/
+		System.out.println(actual);
 		
 		
 		
