@@ -89,8 +89,7 @@ public class TC038_AdminAddCategory {
 		adminLoginPOM.clickLoginBtn();	
 		
 		//user should able to login to the retail application as an admin
-		Thread.sleep(1000);
-	
+			
 	}
 	
 	@AfterMethod
@@ -131,20 +130,16 @@ public class TC038_AdminAddCategory {
 		
 		//Click on Data Tab
 		adminAddCategoryPOM.clikDataTab();
-		Thread.sleep(1000);
-		
+				
 		//Click on Design Tab
 		adminAddCategoryPOM.clikDesignTab();
-		Thread.sleep(1000);
-		
+				
 		//Click on Save button
 		adminAddCategoryPOM.clikSaveBtn();
-		Thread.sleep(1000);
-		
+				
 		//Display the message of category being added
 		adminAddCategoryPOM.categoryaddedMsg(succssMsg);
-        //Thread.sleep(5000);        
-		
+        		
 	    //Capture the success message
 		String categrorytMsg = adminAddCategoryPOM.categoryaddedMsg(succssMsg);
 		

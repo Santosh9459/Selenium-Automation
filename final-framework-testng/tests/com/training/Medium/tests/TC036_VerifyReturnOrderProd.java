@@ -117,36 +117,28 @@ public class TC036_VerifyReturnOrderProd {
 	{
 		//Click on MY ORDERS link	
 		userlinkPOM.GotoMyOrder();
-		Thread.sleep(1000);
-		
+				
 		//Click on view icon
 		myOrderPOM.clikViewButton();
-		Thread.sleep(1000);
-		
+				
 		//Click on Return icon
 		myOrderPOM.clikReturnBtn();
-		Thread.sleep(1000);
-		
+				
 		//Click on valid Reason for Return radio button
 		myOrderPOM.clikReturnReason();
-		Thread.sleep(1000);
-		
+			
 		//Click radio button of Product is opened category
 		myOrderPOM.clikRadioBtn();
-		Thread.sleep(1000);
-		
+				
 		// Enter reason for return in Faulty or other details textbox
 		myOrderPOM.enterComment(commentBox);
-		Thread.sleep(1000);
-		
+				
 		//Click on Submit button
 		myOrderPOM.clikSubmitBtn();
-		Thread.sleep(1000);
-		
+				
 		//Display the message for return request
 		myOrderPOM.dispSubmitMsg(submitMsg);          
-		Thread.sleep(1000);	
-		
+			
 		
 	    //Capture the success message
 		String returnMsg = myOrderPOM.dispSubmitMsg(submitMsg);		

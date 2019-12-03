@@ -4,6 +4,7 @@ package com.training.Medium.tests;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.JavascriptExecutor;
@@ -11,6 +12,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -135,89 +137,69 @@ public class TC035_AdminAddProdRewd {
 		
 		// Click on Add New icon
 		adminAddProdPOM.addNewProduct();
-		Thread.sleep(1000);
-		
+				
 		// Enter Valid credentials in Product Name of General tab
 		adminAddProdPOM.enterProdName(prodName);
 		adminAddProdPOM.enterMetaTitle(metaTagTitle);
-		Thread.sleep(2000);
-		
+				
 		//Click on Data tab
 		adminAddProdPOM.clickDataTab();
-		Thread.sleep(1000);
-		
+				
 		// Enter valid credentials in various field under Data Tab
 		adminAddProdPOM.enterModel(modelTextBox);
 		adminAddProdPOM.enterPrice(priceTextBox);
 		adminAddProdPOM.enterQuantity(quantityTextBox);
-		Thread.sleep(2000);
+		
 		
 		// Click on Links tab
 		adminAddProdPOM.clikLinksTab();
-		Thread.sleep(1000);
-		
+				
 		//Select Category from displayed category list
-		adminAddProdPOM.selectCategory();
-		Thread.sleep(2000);
+		adminAddProdPOM.selectCategory();		
+		adminAddProdPOM.clikcategorylist();
 		
-		/*Select a = new Select(driver.findElement(By.xpath("//div[@id='tab-links']//li[1]")));
-		//a.selectByIndex(2);
-		a.selectByVisibleText("INDIAN");
-		Thread.sleep(2000); */
 		
 		// Click on Attribute tab
 		adminAddProdPOM.clikAttributeTab();
-		Thread.sleep(2000);
-		
-		
+				
 		// Click on Option tab
 		adminAddProdPOM.clikOptionTab();
-		Thread.sleep(2000);
-		
+			
 		// Click on Reccuring tab
 		adminAddProdPOM.clikRecurringTab();
-		Thread.sleep(2000);
-		
+				
 		// Click on Discount tab
 		adminAddProdPOM.clikDiscountTab();
-		Thread.sleep(1000);
-		
+				
 		// Click on Add discount icon
 		adminAddProdPOM.clikAddDiscount();
-		Thread.sleep(1000);
-		
+			
 		//Enter valid credentials in various filed of discound tab
 		adminAddProdPOM.enterQuantity1(quantity);
 		adminAddProdPOM.enterPrice1(price);
 		adminAddProdPOM.enterStartDate(startDate);
 		adminAddProdPOM.enterEndDate(endDaate);
-		Thread.sleep(5000);		
-		
+				
 		//Click on Special Tab
 		adminAddProdPOM.clikSpecialTab();
-		Thread.sleep(2000);
-		
+			
 		//Click on Image Tab
 		adminAddProdPOM.clikImageTab();
-		Thread.sleep(2000);
 		((JavascriptExecutor)driver).executeScript("window.scrollBy(0,10000)");
 		Thread.sleep(2000);
 		
 		//Click on Rewards Point Tab
 		adminAddProdPOM.clikRewardPointsTab();
-		Thread.sleep(1000);		
 		adminAddProdPOM.enterRewardPoints(pointsTextBox);
 		((JavascriptExecutor)driver).executeScript("window.scrollBy(0,10000)");
 		Thread.sleep(2000);		
 		
 		//Click on Design Tab
 		adminAddProdPOM.clikDesignTab();
-		Thread.sleep(1000);
-		
+				
 		//Click on Save Button
 		adminAddProdPOM.clikSaveButton();		
-        Thread.sleep(5000);
-    
+         
 		
 	    //Capture the success message
 		String productMsg =adminAddProdPOM.productaddedMsg(successMessage);

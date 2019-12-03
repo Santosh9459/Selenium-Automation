@@ -22,12 +22,6 @@ private WebDriver driver;
 		PageFactory.initElements(driver, this);
 	}
 	
-	/*@FindBy(xpath="//*[@id='menu-catalog']/a")
-	private WebElement catalogIconLink; 
-	
-	@FindBy(xpath="//*[@id='menu-catalog']/ul/li[2]/a")
-	private WebElement selectProductLink; */
-	
 	@FindBy(xpath="//*[@id='content']/div[2]/div/div[1]/h3")
 	private WebElement productList;
 	
@@ -64,8 +58,8 @@ private WebDriver driver;
 	@FindBy(id="input-category")
 	private WebElement categoryTextBox;
 	
-	/*@FindBy(xpath="//*[@id='tab-links']/div[2]/div/ul")
-	private WebElement categoryComboBox; */	
+	@FindBy(xpath="//div[@id='tab-links']//li[1]")
+	private WebElement categorylist; 
 	
 	
 	@FindBy(xpath="//*[@id='form-product']/ul/li[4]/a")
@@ -155,25 +149,24 @@ private WebDriver driver;
 		this.linksTab.click();
 	}
 	
-	/*public void clikCategoryBox(){
-		this.categoryTextBox.click();
-	} */
-	
 	public void selectCategory() throws InterruptedException{
 		this.categoryTextBox.click();
 		
 		
-		categoryTextBox.sendKeys(Keys.DOWN);
+		this.categoryTextBox.sendKeys(Keys.DOWN);
 		Thread.sleep(3000);
 		
-		categoryTextBox.sendKeys("INDIAN");
+		this.categoryTextBox.sendKeys("INDIAN");
 		Thread.sleep(3000);
 		
-		categoryTextBox.sendKeys(Keys.INSERT);
+		this.categoryTextBox.sendKeys(Keys.INSERT);
 		Thread.sleep(3000);
 				
 	} 
 	
+	public void clikcategorylist(){
+		this.categorylist.click();
+	}
 	
 	public void clikAttributeTab(){
 		this.attributeTab.click();

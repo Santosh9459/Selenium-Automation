@@ -64,8 +64,7 @@ public class TC037_AdminInvalidCredential {
 		
 		//Declare implicit wait
 		driver.manage().timeouts().implicitlyWait(impWait, TimeUnit.MINUTES);
-		Thread.sleep(1000);
-	
+			
 	}
 	
 	@AfterMethod
