@@ -14,11 +14,11 @@ private WebDriver driver;
 	}
 	
 
-	@FindBy(xpath="//*[@id='System_s3bhXNDb']/div[1]/table/tbody/tr[1]/td[7]")
+	@FindBy(xpath="//tbody//tr[1]//td[7]")
 	private WebElement viewBtn;
 	
 	
-	@FindBy(xpath="//*[@id='System_s3bhXNDb']/div/div[1]/table/tbody/tr/td[6]/a[2]")
+	@FindBy(xpath="//a[@class='btn btn-danger tb_no_text']")
 	private WebElement returnBtn;
 	
 	@FindBy(xpath="//div[@class='col-sm-10']//div[1]//label[1]//input[1]")

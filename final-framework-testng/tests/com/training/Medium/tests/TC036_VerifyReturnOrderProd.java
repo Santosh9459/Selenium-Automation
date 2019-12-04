@@ -92,7 +92,7 @@ public class TC036_VerifyReturnOrderProd {
 	}
 	
 	@AfterMethod
-	public void tearDown() throws Exception {
+	/*public void tearDown() throws Exception {
 		Thread.sleep(1000);
 		
 		//Capture the final screenshot		
@@ -100,7 +100,7 @@ public class TC036_VerifyReturnOrderProd {
 		
 		//Close the browser
 		driver.quit(); 
-	} 
+	} */
 	
 	@BeforeTest
 	public void SetUp() throws Exception{
@@ -147,7 +147,7 @@ public class TC036_VerifyReturnOrderProd {
 		System.out.println(returnMsg); 
 		
 		//Verify the message for return order product
-		if(returnMsg.contains("Thank you for submitting your return request. ")){
+		if(returnMsg.contains("Thank you for submitting your return request.")){
 			System.out.println("Expected Text is obtained");
 		}else{
 			System.out.println("Expected Text is not obtained");

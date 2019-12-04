@@ -210,7 +210,7 @@ public class TC035_AdminAddProdRewd {
 		
 		
 		//Verify the Message
-		if(productMsg.contains(" Success: You have modified products! ")){
+		if(productMsg.contains("Success: You have modified products!")){
 			System.out.println("Expected Text is obtained");
 		}else{
 			System.out.println("Expected Text is not obtained");
