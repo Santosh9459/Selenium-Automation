@@ -2,32 +2,32 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="82087" started-at="2019-12-03T11:53:34Z" finished-at="2019-12-03T11:54:56Z">
+  <suite name="Default suite" duration-ms="25041" started-at="2019-12-03T17:30:55Z" finished-at="2019-12-03T17:31:20Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="82087" started-at="2019-12-03T11:53:34Z" finished-at="2019-12-03T11:54:56Z">
-      <class name="com.training.Medium.tests.TC035_AdminAddProdRewd">
-        <test-method status="PASS" signature="SetUp()[pri:0, instance:com.training.Medium.tests.TC035_AdminAddProdRewd@28d25987]" name="SetUp" is-config="true" duration-ms="17" started-at="2019-12-03T17:23:34Z" finished-at="2019-12-03T17:23:34Z">
+    <test name="Default test" duration-ms="25041" started-at="2019-12-03T17:30:55Z" finished-at="2019-12-03T17:31:20Z">
+      <class name="com.training.Medium.tests.TC038_AdminAddCategory">
+        <test-method status="PASS" signature="SetUp()[pri:0, instance:com.training.Medium.tests.TC038_AdminAddCategory@28d25987]" name="SetUp" is-config="true" duration-ms="30" started-at="2019-12-03T23:00:55Z" finished-at="2019-12-03T23:00:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.Medium.tests.TC035_AdminAddProdRewd@28d25987]" name="setUpBeforeClass" is-config="true" duration-ms="11432" started-at="2019-12-03T17:23:34Z" finished-at="2019-12-03T17:23:45Z">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.Medium.tests.TC038_AdminAddCategory@28d25987]" name="setUpBeforeClass" is-config="true" duration-ms="10789" started-at="2019-12-03T23:00:55Z" finished-at="2019-12-03T23:01:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="Llogin()[pri:0, instance:com.training.Medium.tests.TC035_AdminAddProdRewd@28d25987]" name="Llogin" is-config="true" duration-ms="10134" started-at="2019-12-03T17:23:45Z" finished-at="2019-12-03T17:23:55Z">
+        <test-method status="PASS" signature="Llogin()[pri:0, instance:com.training.Medium.tests.TC038_AdminAddCategory@28d25987]" name="Llogin" is-config="true" duration-ms="5677" started-at="2019-12-03T23:01:05Z" finished-at="2019-12-03T23:01:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Llogin -->
-        <test-method status="PASS" signature="selectLogin()[pri:0, instance:com.training.Medium.tests.TC035_AdminAddProdRewd@28d25987]" name="selectLogin" duration-ms="58166" started-at="2019-12-03T17:23:55Z" finished-at="2019-12-03T17:24:53Z">
+        <test-method status="PASS" signature="selectLogin()[pri:0, instance:com.training.Medium.tests.TC038_AdminAddCategory@28d25987]" name="selectLogin" duration-ms="6059" started-at="2019-12-03T23:01:11Z" finished-at="2019-12-03T23:01:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectLogin -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.Medium.tests.TC035_AdminAddProdRewd@28d25987]" name="tearDown" is-config="true" duration-ms="2314" started-at="2019-12-03T17:24:53Z" finished-at="2019-12-03T17:24:56Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.Medium.tests.TC038_AdminAddCategory@28d25987]" name="tearDown" is-config="true" duration-ms="2465" started-at="2019-12-03T23:01:17Z" finished-at="2019-12-03T23:01:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.training.Medium.tests.TC035_AdminAddProdRewd -->
+      </class> <!-- com.training.Medium.tests.TC038_AdminAddCategory -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
