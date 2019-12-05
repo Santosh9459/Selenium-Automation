@@ -31,6 +31,10 @@ public class AdminDashboadPOM {
 			@FindBy(xpath="//*[@id='menu-catalog']/ul/li[1]/a")
 			private WebElement selectCatgryLink; 
 			
+			@FindBy(xpath="//*[@id='menu-sale']/ul/li[3]/a")
+			private WebElement selectReturnLink; 
+			
+			
 			
 			
 			public void SelectOrder() {
@@ -53,5 +57,12 @@ public class AdminDashboadPOM {
 				categorySelect.moveToElement(catalogIconLink).build().perform();		
 				selectCatgryLink.click(); 		
 			}
+           
+           public void SelectReturn() {
+				
+				Actions returnSelect = new Actions(driver);
+				returnSelect.moveToElement(salesIcontLink).build().perform();		
+				selectReturnLink.click(); 			
+	        }
 
 }

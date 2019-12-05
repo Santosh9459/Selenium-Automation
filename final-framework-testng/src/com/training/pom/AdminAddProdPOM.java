@@ -112,6 +112,33 @@ private WebDriver driver;
 	private WebElement successMessage;
 	
 	
+	
+	@FindBy(xpath="//input[@id='input-name']")
+	private WebElement filteProductName;
+	
+	@FindBy(xpath="//input[@id='input-price']")
+	private WebElement filterPrice;
+	
+	@FindBy(xpath="//select[@id='input-status']")
+	private WebElement filterStatus;
+	
+	@FindBy(xpath="//input[@id='input-model']")
+	private WebElement filterModel;
+	
+	@FindBy(xpath="//input[@id='input-quantity']")
+	private WebElement filterQuantity;	
+	
+	@FindBy(xpath="//select[@id='input-image']")
+	private WebElement filterImage;
+	
+	@FindBy(xpath="//button[@id='button-filter']")
+	private WebElement filterButton;
+	
+	@FindBy(xpath="//div[@class='col-sm-6 text-right']")
+	private WebElement productListMsg;
+	
+	
+	
 	public void addNewProduct(){
 		this.addNewIcon.click();
 	}
@@ -245,4 +272,45 @@ private WebDriver driver;
 	       return this.successMessage.getText();
 	}
 	
+	public void enterfilterProductName(String ProductName){
+		this.filteProductName.clear();
+		this.filteProductName.sendKeys(ProductName);
+	}
+	
+	public void enterFilterPrice(String Price){
+		this.filterPrice.clear();
+		this.filterPrice.sendKeys(Price);
+	}
+	
+	public String selectFilterStatus(String Status) throws InterruptedException{
+		this.filterStatus.click();
+		Select a = new Select(this.filterStatus);
+		a.selectByVisibleText("Enabled");
+		return a.toString();							
+	} 
+	
+	public void enterFilterModel(String Model){
+		this.filterModel.clear();
+		this.filterModel.sendKeys(Model);
+	}
+	
+	public void enterFilterQuantity(String Quantity){
+		this.filterQuantity.clear();
+		this.filterQuantity.sendKeys(Quantity);
+	}
+	
+	public String selectFilterImage(String Image) throws InterruptedException{
+		this.filterImage.click();
+		Select a = new Select(this.filterImage);
+		a.selectByVisibleText("Enabled");
+		return a.toString();							
+	} 
+	
+	public void clikFilterButton(){
+		this.filterButton.click();
+	}
+	
+	public String filterProductMsg(String prodListMessage ){
+	       return this.productListMsg.getText();
+	}
 }

@@ -1,7 +1,4 @@
-//TC017_To Verify whether application allows the admin to delete a order from order list
-
-
-package com.training.Simple.tests;
+package com.training.Complex.test;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -9,7 +6,6 @@ import java.util.Properties;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -19,26 +15,35 @@ import org.testng.annotations.Test;
 import com.training.generics.ScreenShot;
 import com.training.pom.AdminDashboadPOM;
 import com.training.pom.AdminLoginPOM;
-import com.training.pom.AdmintOrdersPOM;
-import com.training.pom.LoginRetailPOM;
-import com.training.pom.MyAccountPOM;
-import com.training.pom.PersonalDetailsPOM;
-import com.training.pom.UserLinkPOM;
+import com.training.pom.AdminProductRetrunPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
-public class TC017_DeleteOrder {
-	//Define variable and POM
+public class TC83_VerifyErrorMsgonReturnProd {
+	
 	private WebDriver driver;
 	private String adminURL;
 	private AdminLoginPOM adminLoginPOM;
 	private AdminDashboadPOM adminDashboadPOM;
-	private AdmintOrdersPOM admintOrdersPOM;
+	private AdminProductRetrunPOM adminProductRetrunPOM;
 	private String adminUserName;
 	private String adminPassword;
+	
 	private String orderId;
-	private String sucessMsg;
+	private String customer;
+	private String firstName;
+	private String lastName;
+	private String emailTextBox;
+	private String telephone;
+	private String prodcut;
+	private String model;	
+	private String successMessage;
+	private String retrunMsg;
+	private String errorMsg;
+	
+	private int impWait;
 	private static Properties properties;
+	
 	private ScreenShot screenShot;
 
 	@BeforeClass
@@ -49,12 +54,22 @@ public class TC017_DeleteOrder {
 		//Initialize POM variable
 		adminLoginPOM = new AdminLoginPOM(driver);
 		adminDashboadPOM = new AdminDashboadPOM(driver);
-		admintOrdersPOM = new AdmintOrdersPOM(driver);
+		adminProductRetrunPOM = new AdminProductRetrunPOM(driver);
 		//Initialize property file variables
 		adminUserName = properties.getProperty("AdminUserName");
 		adminPassword = properties.getProperty("AdminPassword");
-		orderId =properties.getProperty("OrderID");
+		orderId =properties.getProperty("ORDERID2");
+		customer =properties.getProperty("Customer2");
+		firstName =properties.getProperty("FirstName2");
+		lastName =properties.getProperty("LastName2");
+		emailTextBox =properties.getProperty("EmailTextBox2");
+		telephone =properties.getProperty("Telephone2");
+		prodcut =properties.getProperty("Prodcut2");
+		model =properties.getProperty("Model2");
+		orderId =properties.getProperty("ORDERID2");
 
+		//Declare Implicit wait
+		String impWait = properties.getProperty("implicitWait").toString();
 		
 		screenShot = new ScreenShot(driver);
 		
@@ -78,8 +93,11 @@ public class TC017_DeleteOrder {
 	@AfterMethod
 	public void tearDown() throws Exception {
 		Thread.sleep(1000);		
+		//Capture the final screenshot 
+		screenShot.captureScreenShot("Verify Return Product with error message");
+		
 		//Close the browser
-		driver.quit(); 
+		//driver.quit(); 
 	} 
 	
 	@BeforeTest
@@ -92,42 +110,33 @@ public class TC017_DeleteOrder {
 	}
 
 	@Test	
-	public void selectLogin() throws InterruptedException
+	public void verifyReturnproduct() throws InterruptedException
 	{
-		//Open the Order page
-		adminDashboadPOM.SelectOrder();
-		//Provide the order id 
-		admintOrdersPOM.sendOrderID(orderId);
-		//Click on the filter button
-		admintOrdersPOM.clickFilterButton();
-		//Select the Checkbox
-		admintOrdersPOM.clickCheckbox();
-		//Click on the delete button
-		admintOrdersPOM.clickDeleteButton();	
+		adminDashboadPOM.SelectReturn();
+		adminProductRetrunPOM.clikAddNewButton();
+		adminProductRetrunPOM.enterOrderID(orderId);
+		adminProductRetrunPOM.enterCustomer(customer);
+		adminProductRetrunPOM.enterFirstName(firstName);
+		adminProductRetrunPOM.enterLastName(lastName);
+		adminProductRetrunPOM.enterEmail(emailTextBox);
+		adminProductRetrunPOM.enterTelephone(telephone);
+		adminProductRetrunPOM.enterProdcut(prodcut);
+		adminProductRetrunPOM.enterModel(model);
+		adminProductRetrunPOM.clikSaveButton();
 		
-        Thread.sleep(5000);
-		//Capture the Pop up window and their message
-		Alert al =driver.switchTo().alert();
-		System.out.println(al.getText());	
-		//Click on Ok button
-		al.accept();
 		
-	    //Capture the success message
-		//String orderMsg =admintOrdersPOM.orderModifiedMsg(sucessMsg);
+		String errmsg = adminProductRetrunPOM.errorMessage(errorMsg);
 		
-		//Print the message on the console
-		//System.out.println(orderMsg); 
+		System.out.println(errmsg);
 		
-		//String expectation ="Success: You have modified orders!";
-		String actual =  admintOrdersPOM.orderModifiedMsg(sucessMsg);
+		if(errmsg.contains("Warning: Please check the form carefully for errors!")){
+			System.out.println("Expected Text is obtained");
+		}else{
+			System.out.println("Expected Text is not obtained");
+		}
+		
+	    
+	}
 
-		//Assert.assertEquals(expectation,actual);
-		Assert.assertTrue("Success: You have modified orders!".contains(actual));
-		
-		System.out.println(actual);
-		
-		
-		
-	}	
 
 }

@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.training.Medium.tests.TC036_VerifyReturnOrderProd">
+      <class name="com.training.Complex.test.TC82_ReturnAndDeleteMutipleProduct">
         <methods>
-          <include name="selectLogin"/>
-          <include name="tearDown"/>
-          <include name="SetUp"/>
           <include name="setUpBeforeClass"/>
+          <include name="SetUp"/>
+          <include name="verifyReturnproduct"/>
+          <include name="tearDown"/>
           <include name="Llogin"/>
         </methods>
-      </class> <!-- com.training.Medium.tests.TC036_VerifyReturnOrderProd -->
+      </class> <!-- com.training.Complex.test.TC82_ReturnAndDeleteMutipleProduct -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

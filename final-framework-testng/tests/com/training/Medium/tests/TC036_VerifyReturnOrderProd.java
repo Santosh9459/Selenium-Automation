@@ -92,7 +92,7 @@ public class TC036_VerifyReturnOrderProd {
 	}
 	
 	@AfterMethod
-	/*public void tearDown() throws Exception {
+	public void tearDown() throws Exception {
 		Thread.sleep(1000);
 		
 		//Capture the final screenshot		
@@ -100,7 +100,7 @@ public class TC036_VerifyReturnOrderProd {
 		
 		//Close the browser
 		driver.quit(); 
-	} */
+	} 
 	
 	@BeforeTest
 	public void SetUp() throws Exception{

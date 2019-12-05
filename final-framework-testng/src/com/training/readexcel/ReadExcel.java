@@ -43,7 +43,7 @@ public class ReadExcel {
 
 	// Test method, change the path of the .xls file 
 	public static void main(String[] args) {
-		String[][] result = new ReadExcel().getExcelData("C:/Users/Naveen/Desktop/Testing.xls", "Sheet1"); 
+		String[][] result = new ReadExcel().getExcelData("C:\\Users\\SantoshSingh\\git\\Selenium-Automation\\final-framework-testng\\resources\\RTD_006.xlsx", "FilterData"); 
 		
 		for(String [] temp : result){
 			for(String temp1: temp){
