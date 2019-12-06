@@ -2,32 +2,32 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24396" started-at="2019-12-05T18:11:50Z" finished-at="2019-12-05T18:12:14Z">
+  <suite name="Default suite" duration-ms="70236" started-at="2019-12-06T10:22:19Z" finished-at="2019-12-06T10:23:30Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="24396" started-at="2019-12-05T18:11:50Z" finished-at="2019-12-05T18:12:14Z">
-      <class name="com.training.Complex.test.TC83_VerifyErrorMsgonReturnProd">
-        <test-method status="PASS" signature="SetUp()[pri:0, instance:com.training.Complex.test.TC83_VerifyErrorMsgonReturnProd@28d25987]" name="SetUp" is-config="true" duration-ms="14" started-at="2019-12-05T23:41:50Z" finished-at="2019-12-05T23:41:50Z">
+    <test name="Default test" duration-ms="70236" started-at="2019-12-06T10:22:19Z" finished-at="2019-12-06T10:23:30Z">
+      <class name="com.training.Medium.tests.TC035_AdminAddProdRewd">
+        <test-method status="PASS" signature="SetUp()[pri:0, instance:com.training.Medium.tests.TC035_AdminAddProdRewd@28d25987]" name="SetUp" is-config="true" duration-ms="21" started-at="2019-12-06T15:52:19Z" finished-at="2019-12-06T15:52:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.Complex.test.TC83_VerifyErrorMsgonReturnProd@28d25987]" name="setUpBeforeClass" is-config="true" duration-ms="12376" started-at="2019-12-05T23:41:50Z" finished-at="2019-12-05T23:42:02Z">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.Medium.tests.TC035_AdminAddProdRewd@28d25987]" name="setUpBeforeClass" is-config="true" duration-ms="12869" started-at="2019-12-06T15:52:19Z" finished-at="2019-12-06T15:52:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="Llogin()[pri:0, instance:com.training.Complex.test.TC83_VerifyErrorMsgonReturnProd@28d25987]" name="Llogin" is-config="true" duration-ms="6314" started-at="2019-12-05T23:42:02Z" finished-at="2019-12-05T23:42:08Z">
+        <test-method status="PASS" signature="Llogin()[pri:0, instance:com.training.Medium.tests.TC035_AdminAddProdRewd@28d25987]" name="Llogin" is-config="true" duration-ms="25437" started-at="2019-12-06T15:52:32Z" finished-at="2019-12-06T15:52:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Llogin -->
-        <test-method status="PASS" signature="verifyReturnproduct()[pri:0, instance:com.training.Complex.test.TC83_VerifyErrorMsgonReturnProd@28d25987]" name="verifyReturnproduct" duration-ms="4103" started-at="2019-12-05T23:42:08Z" finished-at="2019-12-05T23:42:12Z">
+        <test-method status="PASS" signature="selectLogin()[pri:0, instance:com.training.Medium.tests.TC035_AdminAddProdRewd@28d25987]" name="selectLogin" duration-ms="29578" started-at="2019-12-06T15:52:58Z" finished-at="2019-12-06T15:53:27Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyReturnproduct -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.Complex.test.TC83_VerifyErrorMsgonReturnProd@28d25987]" name="tearDown" is-config="true" duration-ms="1552" started-at="2019-12-05T23:42:12Z" finished-at="2019-12-05T23:42:14Z">
+        </test-method> <!-- selectLogin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.Medium.tests.TC035_AdminAddProdRewd@28d25987]" name="tearDown" is-config="true" duration-ms="2308" started-at="2019-12-06T15:53:27Z" finished-at="2019-12-06T15:53:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.training.Complex.test.TC83_VerifyErrorMsgonReturnProd -->
+      </class> <!-- com.training.Medium.tests.TC035_AdminAddProdRewd -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
