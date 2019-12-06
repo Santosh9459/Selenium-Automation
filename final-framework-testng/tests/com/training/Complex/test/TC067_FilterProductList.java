@@ -1,3 +1,5 @@
+//To Verify whether application allows the admin to filter the product details with multiple values
+
 package com.training.Complex.test;
 
 import java.io.FileInputStream;
@@ -23,6 +25,7 @@ import com.training.utility.DriverNames;
 
 public class TC067_FilterProductList {
 	
+	//Define variable and POM
 	private WebDriver driver;
 	private String adminURL;
 	private AdminLoginPOM adminLoginPOM;
@@ -88,7 +91,7 @@ public class TC067_FilterProductList {
 		adminLoginPOM.clickLoginBtn();	
 		
 		//user should able to login to the retail application as an admin
-		adminDashboadPOM.selectCategories();
+		
 	
 	}
 	
@@ -100,7 +103,7 @@ public class TC067_FilterProductList {
 		screenShot.captureScreenShot("Verify Product List using Filter Criteria");
 		
 		//Close the browser
-		//driver.quit(); 
+		driver.quit(); 
 	} 
 	
 	@BeforeTest
@@ -112,25 +115,44 @@ public class TC067_FilterProductList {
 		
 	}
     
+	//Test to filter the product list by giving provided details
 	@Test
 	public void productList() throws InterruptedException 
 	{
-
-		this.adminAddProdPOM.enterfilterProductName(productName);
-		this.adminAddProdPOM.enterFilterPrice(price);
-		this.adminAddProdPOM.selectFilterStatus(status);
-		this.adminAddProdPOM.enterFilterModel(model);
-		this.adminAddProdPOM.enterFilterQuantity(quantity);
-		this.adminAddProdPOM.selectFilterImage(image);
+		// Click on Catelog icon and select product link
+		adminDashboadPOM.selectCategories();
 		
-		this.adminAddProdPOM.clikFilterButton();
-		this.adminAddProdPOM.filterProductMsg(prodListMessage);
+		// Enter valid credentials in Product Name textbox
+		adminAddProdPOM.enterfilterProductName(productName);
 		
+		// Enter Valid credentials in Price textbox
+		adminAddProdPOM.enterFilterPrice(price);
 		
+		// Select values from Status list box
+		adminAddProdPOM.selectFilterStatus(status);
 		
+		// Enter Valid credentials in Model textbox
+		adminAddProdPOM.enterFilterModel(model);
+		
+		// Enter Valid credentials in Quantity textbox
+		adminAddProdPOM.enterFilterQuantity(quantity);
+		
+		//Select values from Image list box
+		adminAddProdPOM.selectFilterImage(image);
+		
+		// Click on Filter button
+		adminAddProdPOM.clikFilterButton();
+		
+		//Select the message text box
+		adminAddProdPOM.filterProductMsg(prodListMessage);		
+		
+		////Capture the success message
 		String filterMsg = this.adminAddProdPOM.filterProductMsg(prodListMessage);
+		
+		//Print the message on the console
 		System.out.println(filterMsg);
 		
+		//Verify the Message
 		if(filterMsg.contains("Showing")){
 			System.out.println("Expected Text is obtained");
 		}else{

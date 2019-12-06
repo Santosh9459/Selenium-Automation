@@ -1,3 +1,5 @@
+//RT_083 - To verify whether application displays error message upon entering invalid details while returning product
+
 package com.training.Complex.test;
 
 import java.io.FileInputStream;
@@ -21,6 +23,7 @@ import com.training.utility.DriverNames;
 
 public class TC83_VerifyErrorMsgonReturnProd {
 	
+	//Define variable and POM
 	private WebDriver driver;
 	private String adminURL;
 	private AdminLoginPOM adminLoginPOM;
@@ -71,6 +74,7 @@ public class TC83_VerifyErrorMsgonReturnProd {
 		//Declare Implicit wait
 		String impWait = properties.getProperty("implicitWait").toString();
 		
+		//Initialize Screen Shot 
 		screenShot = new ScreenShot(driver);
 		
 	}
@@ -97,7 +101,7 @@ public class TC83_VerifyErrorMsgonReturnProd {
 		screenShot.captureScreenShot("Verify Return Product with error message");
 		
 		//Close the browser
-		//driver.quit(); 
+		driver.quit(); 
 	} 
 	
 	@BeforeTest
@@ -109,26 +113,50 @@ public class TC83_VerifyErrorMsgonReturnProd {
 		
 	}
 
+	//Test to verify Error message upon entering invalid details
 	@Test	
 	public void verifyReturnproduct() throws InterruptedException
-	{
+	{ 
+		// click on Sales icon and select Return link
 		adminDashboadPOM.SelectReturn();
+		
+		// click on Add new icon
 		adminProductRetrunPOM.clikAddNewButton();
+		
+		//// enter valid credential in Order ID textbox
 		adminProductRetrunPOM.enterOrderID(orderId);
+		
+		//// enter valid credential in Customer textbox
 		adminProductRetrunPOM.enterCustomer(customer);
+		
+		//enter valid credential in First Name textbox
 		adminProductRetrunPOM.enterFirstName(firstName);
+		
+		//enter valid credential in Last Name textbox
 		adminProductRetrunPOM.enterLastName(lastName);
+		
+		//enter valid credential in E-Mail textbox
 		adminProductRetrunPOM.enterEmail(emailTextBox);
+		
+		//enter valid credential in Phone textbox
 		adminProductRetrunPOM.enterTelephone(telephone);
+		
+		//enter valid credential in Product textbox
 		adminProductRetrunPOM.enterProdcut(prodcut);
+		
+		//enter valid credential in Model textbox
 		adminProductRetrunPOM.enterModel(model);
+		
+		//Click on Save icon
 		adminProductRetrunPOM.clikSaveButton();
 		
-		
+		//Capture the text message
 		String errmsg = adminProductRetrunPOM.errorMessage(errorMsg);
 		
+		//Print the message on console
 		System.out.println(errmsg);
 		
+		//Verify the Message
 		if(errmsg.contains("Warning: Please check the form carefully for errors!")){
 			System.out.println("Expected Text is obtained");
 		}else{

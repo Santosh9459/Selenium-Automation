@@ -241,7 +241,9 @@ private WebDriver driver;
 		dt=cl.getTime();
 		String str = df.format(dt);
 		this.endDate.sendKeys(str);
-	}
+	} 
+	
+	
 	
 	public void clikSpecialTab(){
 		this.specialTab.click();

@@ -32,6 +32,7 @@ import com.training.pom.PersonalDetailsPOM;
 import com.training.pom.UserLinkPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
+import com.training.utility.DateIncrement;
 
 //Define variable and POM
 public class TC035_AdminAddProdRewd {
@@ -179,6 +180,7 @@ public class TC035_AdminAddProdRewd {
 		adminAddProdPOM.enterPrice1(price);
 		adminAddProdPOM.enterStartDate(startDate);
 		adminAddProdPOM.enterEndDate(endDaate);
+		
 				
 		//Click on Special Tab
 		adminAddProdPOM.clikSpecialTab();

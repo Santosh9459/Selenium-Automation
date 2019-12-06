@@ -1,3 +1,5 @@
+//RTC_082- To verify whether application allows admin to return multiple product of customer & delete from return list
+
 package com.training.Complex.test;
 
 import java.io.FileInputStream;
@@ -23,6 +25,7 @@ import com.training.utility.DriverNames;
 
 public class TC82_ReturnAndDeleteMutipleProduct {
 	
+	//Define variable and POM
 	private WebDriver driver;
 	private String adminURL;
 	private AdminLoginPOM adminLoginPOM;
@@ -72,6 +75,7 @@ public class TC82_ReturnAndDeleteMutipleProduct {
 		//Declare Implicit wait
 		String impWait = properties.getProperty("implicitWait").toString();
 		
+		//Initialize Screen Shot 
 		screenShot = new ScreenShot(driver);
 		
 	}
@@ -98,7 +102,7 @@ public class TC82_ReturnAndDeleteMutipleProduct {
 		screenShot.captureScreenShot("Verify Return Product with Scuccess");
 		
 		//Close the browser
-		//driver.quit(); 
+		driver.quit(); 
 	} 
 	
 	@BeforeTest
@@ -110,29 +114,57 @@ public class TC82_ReturnAndDeleteMutipleProduct {
 		
 	}
 
+	//Test to verify return product and it's deletion
 	@Test	
 	public void verifyReturnproduct() throws InterruptedException
 	{
+		//  click on Sales icon and select Return link
 		adminDashboadPOM.SelectReturn();
+		
+		// click on Add new icon
 		adminProductRetrunPOM.clikAddNewButton();
+		
+		// enter valid credential in Order ID textbox
 		adminProductRetrunPOM.enterOrderID(orderId);
+		
+		// enter valid credential in Customer textbox
 		adminProductRetrunPOM.enterCustomer(customer);
+		
+		// enter valid credential in First Name textbox
 		adminProductRetrunPOM.enterFirstName(firstName);
+		
+		// enter valid credential in Last Name textbox
 		adminProductRetrunPOM.enterLastName(lastName);
+		
+		// enter valid credential in E-Mail textbox
 		adminProductRetrunPOM.enterEmail(emailTextBox);
+		
+		// enter valid credential in Phone textbox
 		adminProductRetrunPOM.enterTelephone(telephone);
+		
+		// enter valid credential in Product textbox
 		adminProductRetrunPOM.enterProdcut(prodcut);
+		
+		// enter valid credential in Model textbox
 		adminProductRetrunPOM.enterModel(model);
+		
+		// Click on Save icon
 		adminProductRetrunPOM.clikSaveButton();
+		
+		//Select the message text box
 		adminProductRetrunPOM.returnModifiedMsg(successMessage);
 		
+		//Capture the text message
 		String succMsg = adminProductRetrunPOM.returnModifiedMsg(successMessage);
 		
+		//Print the message on console
 		System.out.println(succMsg);
 		
-		
+		// click on checkbox beside return product
 		adminProductRetrunPOM.selectCheckbox();
 		Thread.sleep(5000);
+		
+		//Click on Delete icon
 		adminProductRetrunPOM.clikDeleteButton();
 		
 		//Capture the Pop up window and their message
@@ -141,11 +173,13 @@ public class TC82_ReturnAndDeleteMutipleProduct {
 		//Click on Ok button
 		al.accept();
 		
-		
+		//Capture the return message
 		String retmsg = adminProductRetrunPOM.returnMessage(retrunMsg);
 		
+		//Print the message on console
 		System.out.println(retmsg);
 		
+		//Verify the Message
 		if(retmsg.contains("Success: You have modified returns!")){
 			System.out.println("Expected Text is obtained");
 		}else{

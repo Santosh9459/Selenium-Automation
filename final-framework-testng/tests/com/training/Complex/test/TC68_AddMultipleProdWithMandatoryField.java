@@ -1,3 +1,5 @@
+//RTC_068 -To Verify whether application allows admin to add multiple product by entering valid credentials in mandatory fields only
+
 package com.training.Complex.test;
 
 import java.io.FileInputStream;
@@ -22,6 +24,7 @@ import com.training.utility.DriverNames;
 
 public class TC68_AddMultipleProdWithMandatoryField {
 	
+	//Define variable and POM
 	private WebDriver driver;
 	private String adminURL;
 	private AdminLoginPOM adminLoginPOM;
@@ -34,12 +37,6 @@ public class TC68_AddMultipleProdWithMandatoryField {
 	private String metaTagTitle;
 	private String modelTextBox;
 	private String priceTextBox;
-	//private String quantityTextBox;
-	//private String quantity;
-	//private String price;
-	//private String pointsTextBox;
-	//private String startDate;
-	//private String endDaate;
 	
 	private int impWait;
 	private String successMessage;
@@ -66,11 +63,7 @@ public class TC68_AddMultipleProdWithMandatoryField {
 		metaTagTitle = properties.getProperty("MetaTagTitle");
 		modelTextBox = properties.getProperty("ModelTextBox");
 		priceTextBox = properties.getProperty("PriceTextBox");
-		//quantityTextBox = properties.getProperty("QuantityTextBox");
-		//quantity = properties.getProperty("Quantity");
-		//price = properties.getProperty("Price");
-		//pointsTextBox = properties.getProperty("PointsTextBox");
-		
+				
 		//Declare Implicit wait
 		String impWait = properties.getProperty("implicitWait").toString();
 			
@@ -117,8 +110,9 @@ public class TC68_AddMultipleProdWithMandatoryField {
 		
 	}
     
+	//Test to add product using Mandatory field only
 	@Test
-	public void selectLogin() throws InterruptedException
+	public void addProductMandatoryField() throws InterruptedException
 	{
 		//Select product from Category Icon	
 		adminDashboadPOM.selectCategories();
@@ -136,7 +130,7 @@ public class TC68_AddMultipleProdWithMandatoryField {
 		// Enter valid credentials in various field under Data Tab
 		adminAddProdPOM.enterModel(modelTextBox);
 		adminAddProdPOM.enterPrice(priceTextBox);
-		//adminAddProdPOM.enterQuantity(quantityTextBox);
+		
 		
 		
 		// Click on Links tab
@@ -146,45 +140,7 @@ public class TC68_AddMultipleProdWithMandatoryField {
 		adminAddProdPOM.selectCategory();		
 		//adminAddProdPOM.clikcategorylist();
 		
-		
-		// Click on Attribute tab
-		//adminAddProdPOM.clikAttributeTab();
-				
-		// Click on Option tab
-		//adminAddProdPOM.clikOptionTab();
-			
-		// Click on Reccuring tab
-		//adminAddProdPOM.clikRecurringTab();
-				
-		// Click on Discount tab
-		//adminAddProdPOM.clikDiscountTab();
-				
-		// Click on Add discount icon
-		//adminAddProdPOM.clikAddDiscount();
-			
-		//Enter valid credentials in various filed of discound tab
-		//adminAddProdPOM.enterQuantity1(quantity);
-		//adminAddProdPOM.enterPrice1(price);
-		//adminAddProdPOM.enterStartDate(startDate);
-		//adminAddProdPOM.enterEndDate(endDaate);
-				
-		//Click on Special Tab
-		//adminAddProdPOM.clikSpecialTab();
-			
-		//Click on Image Tab
-		//adminAddProdPOM.clikImageTab();
-		//((JavascriptExecutor)driver).executeScript("window.scrollBy(0,10000)");
-		//Thread.sleep(2000);
-		
-		//Click on Rewards Point Tab
-		//adminAddProdPOM.clikRewardPointsTab();
-		//adminAddProdPOM.enterRewardPoints(pointsTextBox);
-		//((JavascriptExecutor)driver).executeScript("window.scrollBy(0,10000)");
-		//Thread.sleep(2000);		
-		
-		//Click on Design Tab
-		//adminAddProdPOM.clikDesignTab();
-				
+						
 		//Click on Save Button
 		adminAddProdPOM.clikSaveButton();		
          
